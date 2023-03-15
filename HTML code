@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brightly</title>
+	<style>
+		body {
+			background-color: #0B0C10;
+			color: #FFFFFF;
+			font-family: Arial, sans-serif;
+			font-size: 18px;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		h1 {
+			font-size: 48px;
+			margin: 0;
+			padding: 20px 40px;
+			border: 2px solid white;
+			border-radius: 15px;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 10px;
+		}
+
+		form {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 40px;
+		}
+		
+		input[type="text"] {
+			padding: 10px 20px;
+			border-radius: 50px;
+			border: none;
+			outline: none;
+			font-size: 20px;
+			width: 50%;
+			margin-right: 10px;
+		}
+		
+		button[type="submit"] {
+			padding: 10px 20px;
+			background-color: #5BC0BE;
+			color: #FFFFFF;
+			border: none;
+			border-radius: 50px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		select {
+			padding: 10px 20px;
+			background-color: #5BC0BE;
+			color: #FFFFFF;
+			border: none;
+			border-radius: 50px;
+			font-size: 20px;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+
+		option {
+			background-color: #0B0C10;
+			color: #FFFFFF;
+			font-size: 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Brightly</h1>
+		<form>
+			<input type="text" name="q" placeholder="Search the web...">
+			<select name="search_engine">
+				<option value="https://www.bing.com/search">Bing</option>
+				<option value="https://www.google.com/search">Google</option>
+                <option value="https://search.brave.com/search">Brave</option>
+			</select>
+			<button type="submit"><img src="https://twemoji.maxcdn.com/2/svg/1f50d.svg" alt="Search icon" width="20"></button>
+		</form>
+	</div>
+	<script>
+		const form = document.querySelector("form");
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			const input = document.querySelector("input[name='q']");
+			const select = document.querySelector("select[name='search_engine']");
+			const url = select.value;
+			window.open(`${url}?q=${input.value}`, "_blank");
+			input.value = "";
+		});
+	</script>
+</body>
+</html>
