@@ -5,7 +5,9 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ---
-
+```bash
+tinyurl.com/brightlysearch
+```
 ## ✨ Features
 - **Multi-Search Engine Support**: Switch seamlessly between **Google**, **Bing**, **Brave**, and **DuckDuckGo**.
 - **Clean Interface**: Minimalist design focused on speed and ease of use.
@@ -21,6 +23,7 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/kaheichanturtle/Brightly
+   ```
 2. Open brightly.html in your browser—no server required!
    
 ### Usage
